@@ -44,25 +44,90 @@
 </footer>
 <script>
 window.onload = function(){
-
-    var mousewheelevt=(/Firefox/i.test(navigator.userAgent))? "DOMMouseScroll" : "mousewheel" //FF doesn't recognize mousewheel as of FF3.x
-
-    if (document.attachEvent){
-        document.attachEvent("on"+mousewheelevt, function(e){
-            //console.log('Mouse wheel movement detected!')
-            console.log(e.wheelDelta);
-        });
-    }else if (document.addEventListener){
-        document.addEventListener(mousewheelevt, function(e){
-            //console.log('Mouse wheel movement detected!')
-            console.log(e.detail);
-        }, false)
-    }
+    Event.on(Wheel.ev,function(e){
+        console.log(Wheel.foward(e));
+    });
 
 
 
 
 }
+
+
+/* -----------逻辑代码区----------- */
+/**
+ *  判断浏览器类型
+ *  @Author: jiangfeng
+ *  @Return: 如果是IE就返回IE版本(6,7,8,9)，不是则返回浏览器类型，目前只判断了firefox、chrome和safari。
+ *
+ */
+var UA = (function(){
+    var userAgent = navigator.userAgent.toLowerCase();
+    if(+[1,]){
+        if(/firefox/i.test(userAgent)){
+            return 'firefox';
+        }else if(/chrome/i.test(userAgent)){
+            return 'chrome';
+        }else if(/safari/i.test(userAgent)){
+            return 'safari';
+        }
+    }else{
+        return parseInt((userAgent.match(/.+(?:rv|it|ra|ie)[\/: ]([\d.]+)/ ) || [0,'0'])[1]);
+    }
+})();
+
+/**
+ *  事件判断和绑定
+ *
+ */
+var Event = {
+    //ev: document.attachEvent || document.addEventListener,
+    on:function(event,fn){
+        if(UA == 'firefox' || UA == 'chrome' || UA == 'safari'){
+            document.addEventListener(event, fn, false)
+        }else{
+            document.attachEvent("on" + event, fn);
+        }
+    }
+};
+
+
+
+/**
+ *  鼠标滚轮
+ *  @Param: ev 根据浏览器判断滚轮事件，firefox是DOMMouseScroll,其它是mousewheel
+ *  @Param: distance 返回滚动的值 firefox是+-3，其它是+-120
+ *  @param: foward 返回滚动方向 up 向上 down向下
+ *  @param: position 返回鼠标每次滚动的距离，一般是1
+ *
+ */
+var Wheel = {
+    ev:(UA == 'firefox') ? 'DOMMouseScroll' : 'mousewheel',
+    distance:function(e){
+        return (UA == 'firefox') ? e.detail : e.wheelDelta;
+    },
+    foward:function(e){
+        return (UA == 'firefox') ? (this.distance(e) < 0) ? 'up' : 'down' : (this.distance(e) > 0) ? 'up' : 'donw';
+        /*
+        if(UA == 'firefox'){
+            return (this.distance(e) < 0) ? 'up' : 'down';
+        }else{
+            return (this.distance(e) > 0) ? 'up' : 'donw';
+        }
+        */
+    },
+    position:function(e){
+        return Math.abs((UA == 'firefox') ? this.distance(e)/3 : this.distance(e)/120);
+    }
+};
+
+/**
+ *  滚动条距离顶部的值
+ *
+ *
+ *
+ *
+ */
 </script>
 </body>
 </html>
