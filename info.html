@@ -44,8 +44,12 @@
 </footer>
 <script>
 window.onload = function(){
+    console.log(Scroll._docHeight());
+
+    //
     Event.on(Wheel.ev,function(e){
-        console.log(Wheel.foward(e));
+        //console.log(Scroll.getScrollTop());
+        //console.log(Wheel.foward(e));
     });
 
 
@@ -103,11 +107,11 @@ var Event = {
  */
 var Wheel = {
     ev:(UA == 'firefox') ? 'DOMMouseScroll' : 'mousewheel',
-    distance:function(e){
+    _distance:function(e){
         return (UA == 'firefox') ? e.detail : e.wheelDelta;
     },
     foward:function(e){
-        return (UA == 'firefox') ? (this.distance(e) < 0) ? 'up' : 'down' : (this.distance(e) > 0) ? 'up' : 'donw';
+        return (UA == 'firefox') ? (this._distance(e) < 0) ? 'up' : 'down' : (this._distance(e) > 0) ? 'up' : 'donw';
         /*
         if(UA == 'firefox'){
             return (this.distance(e) < 0) ? 'up' : 'down';
@@ -117,17 +121,37 @@ var Wheel = {
         */
     },
     position:function(e){
-        return Math.abs((UA == 'firefox') ? this.distance(e)/3 : this.distance(e)/120);
+        return Math.abs((UA == 'firefox') ? this._distance(e)/3 : this._distance(e)/120);
     }
 };
 
 /**
- *  滚动条距离顶部的值
- *
- *
- *
- *
+ *  滚动条的状态，是否到达顶部或者底部，返回距离顶部的值
+ *  @Param: getScrollTop 滚动条距离顶部高度
+ *  @Param: viewHeight 窗口可视范围的高度
+ *  @Param: 文档内容实际高度
  */
+var Scroll = {
+    getScrollTop:function(){
+        return ( UA == 'chrome' || UA == 'safari') ? document.body.scrollTop : document.documentElement.scrollTop;
+        /*
+        if( UA == 'chrome' || UA == 'safari'){
+            return document.body.scrollTop
+        }else{
+            return document.documentElement.scrollTop;
+        }
+        */
+    },
+    viewHeight:function(){
+        return document.documentElement.clientHeight;
+    },
+    _docHeight:function(){
+        return document.body.clientHeight;
+        //return document.body.clientHeight;
+    }
+};
+
+
 </script>
 </body>
 </html>
