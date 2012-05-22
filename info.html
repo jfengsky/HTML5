@@ -44,18 +44,25 @@
 </footer>
 <script>
 window.onload = function(){
-    console.log(Scroll._docHeight());
+    var win_height = Scroll.viewHeight();   //页面可视区域的高度
+    var doc_height = Scroll._docHeight();   //页面文档内容的高度
+    var scroll_top = 0; //滚动条距离顶部的高度，默认为0
 
-    //
-    Event.on(Wheel.ev,function(e){
+
+    window.onscroll = function(){
         //console.log(Scroll.getScrollTop());
-        //console.log(Wheel.foward(e));
+    };
+
+    Event.on(Wheel.ev,function(e){
+        scroll_top = Scroll.getScrollTop();
+
     });
 
 
 
 
-}
+
+};
 
 
 /* -----------逻辑代码区----------- */
