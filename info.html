@@ -45,11 +45,14 @@
 </footer>
 <script>
 window.onload = function(){
+    //初始定位到页面顶部
+    document.documentElement.scrollTop = 0;
+
     var win_height = Scroll.viewHeight();   //页面可视区域的高度
     var doc_height = Scroll._docHeight();   //页面文档内容的高度
     var scroll_top = 0; //滚动条距离顶部的高度，默认为0
 
-    var demo_top = 10;
+    var demo_top = 20;
     window.onscroll = function(){
         //console.log(Scroll.getScrollTop());
     };
@@ -57,31 +60,20 @@ window.onload = function(){
     Event.on(Wheel.ev,function(e){
             var mouse_foward = Wheel.foward(e);
             scroll_top = Scroll.getScrollTop();
-            if(scroll_top == 0){
-                return false;
-            }else if(scroll_top + win_height >= doc_height){
+            if(scroll_top == 0 || (scroll_top + win_height >= doc_height)){
                 return false;
             }else{
-
                 if(mouse_foward == 'up'){
-                    demo_top = demo_top - 30;
+                    demo_top = demo_top - 60;
                     var temp_demo_top = scroll_top + demo_top;
                     setAttr('demo','style','top:'+ temp_demo_top + 'px')
                 }else if(mouse_foward == 'down'){
-                    demo_top = demo_top + 30;
+                    demo_top = demo_top + 60;
                     var temp_demo_top = scroll_top + demo_top;
                     setAttr('demo','style','top:'+ temp_demo_top + 'px')
                 }
             }
-
-
-
     });
-
-
-
-
-
 };
 
 
