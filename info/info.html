@@ -11,7 +11,17 @@
 <header>
 
 </header>
+<figure class="pics" id="J_pica">
+
+</figure>
+<figure class="pics" id="J_picb">
+
+</figure>
 <section>
+    <article>
+        <h2>基本信息</h2>
+        <div class="">基本内容</div>
+    </article>
     <article>
         <div id="demo"></div>
         <div>
@@ -33,10 +43,10 @@
     </article>
     <menu>
         <ul>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
+            <li>导航文字一</li>
+            <li>导航文字二</li>
+            <li>导航文字三</li>
+            <li>导航文字四</li>
         </ul>
     </menu>
 </section>
@@ -46,6 +56,7 @@
 <script>
 window.onload = function(){
     //初始定位到页面顶部
+    console.log('abcd');
     document.documentElement.scrollTop = 0;
 
     var win_height = Scroll.viewHeight();   //页面可视区域的高度
@@ -53,13 +64,16 @@ window.onload = function(){
     var scroll_top = 0; //滚动条距离顶部的高度，默认为0
 
     var demo_top = 20;
-    window.onscroll = function(){
-        //console.log(Scroll.getScrollTop());
+    window.onscroll = function(){   //返回距离顶部的高度
+        console.log(Scroll.getScrollTop());
+        demo_top = demo_top + 10;
+        main(Scroll.getScrollTop(),demo_top);
     };
 
-    Event.on(Wheel.ev,function(e){
+    Event.on(Wheel.ev,function(e){  //返回距离顶部的高度
             var mouse_foward = Wheel.foward(e);
             scroll_top = Scroll.getScrollTop();
+            /*
             if(scroll_top == 0 || (scroll_top + win_height >= doc_height)){
                 return false;
             }else{
@@ -73,7 +87,18 @@ window.onload = function(){
                     setAttr('demo','style','top:'+ temp_demo_top + 'px')
                 }
             }
+            */
     });
+
+    /**
+     *  @Param: {el} 滚动条高度
+     */
+    function main(el,bl){
+        //var img_a = $('J_pica');
+        //var img_b = $('J_picb');
+        setAttr('J_pica','style','top:' + el + 'px');
+        setAttr('J_picb','style','top:' + bl + 'px');
+    }
 };
 
 
