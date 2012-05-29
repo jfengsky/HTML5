@@ -1,94 +1,102 @@
 ﻿<!DOCTYPE HTML>
 <html>
 <head>
-<meta charset=utf-8">
+<meta charset="utf-8">
 <title>info</title>
 <link rel="stylesheet/less" type="text/css" href="style.less">
 <script src="less-min.js" type="text/javascript"></script>
 </head>
 
 <body>
-<header>
+<div id="main">
+    <header>
 
-</header>
-<figure class="pics" id="J_pica">
+    </header>
+    <figure class="pics" id="J_pica">
 
-</figure>
-<figure class="pics" id="J_picb">
+    </figure>
 
-</figure>
-<section>
-    <article>
-        <h2>基本信息</h2>
-        <div class="">基本内容</div>
-    </article>
-    <article>
-        <div id="demo"></div>
-        <div>
-            <h2>title1</h2>
-            <p style="height:500px">content1</p>
-        </div>
-        <div>
-            <h2>title2</h2>
-            <p style="height:800px">content2</p>
-        </div>
-        <div>
-            <h2>title3</h2>
-            <p style="height:500px">content3</p>
-        </div>
-        <div>
-            <h2>title4</h2>
-            <p style="height:800px">content4</p>
-        </div>
-    </article>
-    <menu>
-        <ul>
-            <li>导航文字一</li>
-            <li>导航文字二</li>
-            <li>导航文字三</li>
-            <li>导航文字四</li>
-        </ul>
-    </menu>
-</section>
-<footer>
+    <section>
+        <article>
+            <h2>基本信息</h2>
+            <div class="">基本内容</div>
+        </article>
+        <article>
+            <div id="demo"></div>
+            <div>
+                <h2>title1</h2>
+                <p style="height:500px">content1</p>
+            </div>
+            <div>
+                <h2>title2</h2>
+                <p style="height:800px">content2</p>
+            </div>
+            <div>
+                <h2>title3</h2>
+                <p style="height:500px">content3</p>
+            </div>
+            <div>
+                <h2>title4</h2>
+                <p style="height:800px">content4</p>
+            </div>
+        </article>
+        <menu>
+            <ul>
+                <li>导航文字一</li>
+                <li>导航文字二</li>
+                <li>导航文字三</li>
+                <li>导航文字四</li>
+            </ul>
+        </menu>
+    </section>
+    <footer>
 
-</footer>
+    </footer>
+</div>
 <script>
 window.onload = function(){
     //初始定位到页面顶部
-    console.log('abcd');
     document.documentElement.scrollTop = 0;
 
     var win_height = Scroll.viewHeight();   //页面可视区域的高度
     var doc_height = Scroll._docHeight();   //页面文档内容的高度
     var scroll_top = 0; //滚动条距离顶部的高度，默认为0
 
-    var demo_top = 20;
+
+    var demo_top = 20;  //步长
     window.onscroll = function(){   //返回距离顶部的高度
         console.log(Scroll.getScrollTop());
-        demo_top = demo_top + 10;
+
+        demo_top = demo_top + 20;
         main(Scroll.getScrollTop(),demo_top);
     };
-
-    Event.on(Wheel.ev,function(e){  //返回距离顶部的高度
-            var mouse_foward = Wheel.foward(e);
-            scroll_top = Scroll.getScrollTop();
-            /*
-            if(scroll_top == 0 || (scroll_top + win_height >= doc_height)){
-                return false;
-            }else{
-                if(mouse_foward == 'up'){
-                    demo_top = demo_top - 60;
-                    var temp_demo_top = scroll_top + demo_top;
-                    setAttr('demo','style','top:'+ temp_demo_top + 'px')
-                }else if(mouse_foward == 'down'){
-                    demo_top = demo_top + 60;
-                    var temp_demo_top = scroll_top + demo_top;
-                    setAttr('demo','style','top:'+ temp_demo_top + 'px')
-                }
-            }
-            */
-    });
+//    Event.on(Wheel.ev,function(e){  //返回距离顶部的高度
+//            //var mouse_foward = Wheel.foward(e);
+//            //scroll_top = Scroll.getScrollTop();
+//            /*
+//            var mouse_foward = Wheel.foward(e);
+//            if( mouse_foward == 'up'){
+//                demo_top = demo_top + 20;
+//            }else if( mouse_foward == 'down'){
+//                demo_top = demo_top - 20;
+//            }
+//
+//            main(Scroll.getScrollTop(),demo_top);
+//
+//
+//            if(scroll_top == 0 || (scroll_top + win_height >= doc_height)){
+//                return false;
+//            }else{
+//                if(mouse_foward == 'up'){
+//                    demo_top = demo_top + 20;
+//                    main(scroll_top,demo_top)
+//                //}else if(mouse_foward == 'down'){
+//                //    demo_top = demo_top - 20;
+//                //    main(scroll_top,demo_top)
+//                }
+//            }
+//            */
+//    });
 
     /**
      *  @Param: {el} 滚动条高度
@@ -96,8 +104,13 @@ window.onload = function(){
     function main(el,bl){
         //var img_a = $('J_pica');
         //var img_b = $('J_picb');
-        setAttr('J_pica','style','top:' + el + 'px');
-        setAttr('J_picb','style','top:' + bl + 'px');
+        //setAttr('J_pica','style','top:' + el + 'px');
+        try{
+            setAttr('J_pica','style','top:' + bl + 'px');
+        }catch(e){
+            console.log(e.name);
+        }
+
     }
 };
 
@@ -147,10 +160,10 @@ var Event = {
 
 /**
  *  鼠标滚轮
- *  @Param: ev 根据浏览器判断滚轮事件，firefox是DOMMouseScroll,其它是mousewheel
- *  @Param: distance 返回滚动的值 firefox是+-3，其它是+-120
- *  @param: foward 返回滚动方向 up 向上 down向下
- *  @param: position 返回鼠标每次滚动的距离，一般是1
+ *  @Param: {ev} 根据浏览器判断滚轮事件，firefox是DOMMouseScroll,其它是mousewheel
+ *  @Param: {distance} 返回滚动的值 firefox是+-3，其它是+-120
+ *  @param: {foward} 返回滚动方向 up 向上 down向下
+ *  @param: {position} 返回鼠标每次滚动的距离，一般是1
  *
  */
 var Wheel = {
@@ -175,8 +188,8 @@ var Wheel = {
 
 /**
  *  滚动条的状态，是否到达顶部或者底部，返回距离顶部的值
- *  @Param: getScrollTop 滚动条距离顶部高度
- *  @Param: viewHeight 窗口可视范围的高度
+ *  @Param: {getScrollTop} 滚动条距离顶部高度
+ *  @Param: {viewHeight} 窗口可视范围的高度
  *  @Param: 文档内容实际高度
  */
 var Scroll = {
@@ -203,9 +216,9 @@ var Scroll = {
  * 设置标签属性值
  * @author jiangfeng
  * @time 12-5-7 16:12
- * @param id string
- * @param name string 属性名
- * @param val string 属性值
+ * @param {id} string
+ * @param {name} string 属性名
+ * @param {val} string 属性值
  * @return 属性值
  */
 function setAttr(id,name,val){
@@ -218,6 +231,8 @@ function setAttr(id,name,val){
         }
     }
 }
+
+
 </script>
 </body>
 </html>
