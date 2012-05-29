@@ -40,7 +40,7 @@ ie6死而不僵，国内ie6使用者还是占有比较大的比率，所以对�
 <code>position:fixed</code>可以让HTML元素脱离文档流固定在浏览器的某个位置，但ie6不支持。
 我们可以通过css里写<code>{position:absolute;top:expression(eval(document.documentElement.scrollTop))}</code>来进行hack，但这还需要DTD的支持，还非常消耗性能。
 
-利用js,我们可以根据onscroll事件来通过scrollTop实时获取滚动条高度，然后赋值给top属性解决这个问题，代码如下：
+利用js,我们可以根据onscroll事件来通过scrollTop实时获取滚动条高度，然后赋值给top属性解决这个问题，下面是个简单的例子，可以复制到本地浏览器里运行查看效果：
 <pre>
 &lt;!DOCTYPE html>
 &lt;html>
