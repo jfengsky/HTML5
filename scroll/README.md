@@ -46,7 +46,7 @@ ie6死而不僵，国内ie6使用者还是占有比较大的比率，所以对�
 &lt;html>
 &lt;meta charset="utf-8">
 &lt;head>
-&lt;title>解决ie6下没有position:fixed的问题</title>
+&lt;title>解决ie6下没有position:fixed的问题&lt;/title>
 &lt;style>
 .fix{
     width:14px;
@@ -60,8 +60,8 @@ ie6死而不僵，国内ie6使用者还是占有比较大的比率，所以对�
 &lt;/style>
 &lt;/head>
 &lt;body>
-&lt;div style="height:2000px"></div>
-&lt;div class="fix" id="J_fix">这里固定不动</div>
+&lt;div style="height:2000px">&lt;/div>
+&lt;div class="fix" id="J_fix">这里固定不动&lt;/div>
 &lt;script>
 var fix = document.getElementById('J_fix');
 if(!-[1,]&&!window.XMLHttpRequest){ // 判断浏览器是否ie6
