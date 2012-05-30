@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+<title>解决ie6下没有position:fixed的问题</title>
+<style>
+.fix{
+    width:14px;
+    padding:5px;
+    background:#f60;
+    color:#fff;
+    position:fixed;
+    right:10px;
+    top:10px;
+}
+</style>
+</head>
+<body>
+<div style="height:2000px"></div>
+<div class="fix" id="J_fix">这里固定不动</div>
+<script>
+var fix = document.getElementById('J_fix');
+if(!-[1,]&&!window.XMLHttpRequest){ // 判断浏览器是否ie6
+    fix.style.position = 'absolute'; // 先设置容器绝对定位
+    window.onscroll = function(){   // 当滚动条滚动
+        fix.style.top = document.documentElement.scrollTop + 10;    // 获取滚动条高度给top属性
+    }
+}
+</script>
+</body>
+</html>
