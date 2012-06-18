@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+    <title>返回顶部</title>
+    <style>
+        .fix{
+            width:200px;
+            height: 120px;
+            padding:5px;
+            background:#f60;
+            color:#fff;
+            position:absolute;
+            right:30px;
+            top:100px;
+            cursor:pointer;
+        }
+
+    </style>
+</head>
+<body>
+<div style="height:400px;background-color:#cbf3f8"></div>
+<div style="height:400px;background-color:#ffdfbf"></div>
+<div style="height:400px;background-color:#eabfff"></div>
+<div style="height:400px;background-color:#f2ffbf"></div>
+<div style="height:400px;background-color:#cbf3f8"></div>
+<div class="fix" id="J_fix"></div>
+<script>
+var fix = document.getElementById('J_fix');
+var tag = true;
+var b = 0;
+window.onscroll = function(){   // 当滚动条滚动
+    //console.log(document.documentElement.scrollTop);
+
+
+        if(tag){
+            var t = 0;
+            var d = 400;
+
+            console.log('begin_top:' + b);
+            var c = document.documentElement.scrollTop + document.body.scrollTop + 100;
+            console.log('c:' + c);
+            var anim = setInterval(function(){
+                t = t + 25;
+
+                fix.style.top = Math.ceil(queeaseOut(t,b,c,d)) + 'px';
+
+                if( t > d ){
+                    clearInterval(anim);
+                    return false;
+                }
+            },25);
+
+            tag = false;
+
+            setTimeout(function(){
+                tag = true;
+                begin_top = c;
+                return false;
+            },100)
+        }
+
+
+
+
+
+
+};
+
+
+/**
+ *  一个缓动算法
+ *  @Param:
+ *  - {t} timestamp，指缓动效果开始执行到当前帧开始执行时经过的时间段，单位ms
+ *  - {b} beginning position，起始位置
+ *  - {c} change，要移动的距离，就是终点位置减去起始位置。
+ *  - {d} duration ，缓和效果持续的时间。
+ */
+function queeaseOut(t,b,c,d){
+    return -c * ((t=t/d-1)*t*t*t - 1) + b;
+}
+</script>
+</body>
+</html>
