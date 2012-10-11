@@ -20,15 +20,20 @@
 
 工作经历
 ---
-####2010/8 ~ 至今 瑞友软件(外包进淘宝)
+#### 2010/8 ~ 至今 瑞友软件(外包进淘宝)
 * 所属行业:电子商务
 * 所在部门:淘宝UED
 * 主要职责:
-  + 1.参与了淘宝2012版首页前端开发制作。
-  + 2.其它业务线的前端开发制作，包括：
-    - 拍卖首页：[http://paimai.taobao.com/](http://paimai.taobao.com/)
-    - 我要买:http://love.taobao.com/
-    - 淘公仔频道:http://toy.taobao.com/
-    - 淘公仔设计师平台频道:http://bingo.taobao.com/
-    - 淘宝有求必应频道:http://ying.taobao.com/
+  - 1.维护淘宝首页一些前端需求并且参与了淘宝2012版首页前端开发制作。
+  - 2.其它业务线的前端开发制作，包括：
+    + 拍卖首页：[http://paimai.taobao.com/](http://paimai.taobao.com/)
+    + 我要买:[http://love.taobao.com/](http://love.taobao.com/)
+    + 淘公仔频道:[http://toy.taobao.com/](http://toy.taobao.com/)
+    + 淘公仔设计师平台频道:[http://bingo.taobao.com/](http://bingo.taobao.com/)
+    + 淘宝有求必应频道:[http://ying.taobao.com/](http://ying.taobao.com/)
 等……
+
+#### 2009/5 ~ 2010/7 杭州共震科技技术有限公司
+* 所属行业:互联网、电子商务
+* 所在部门:技术部
+* 主要职责:负责客户网站的前端制作。
