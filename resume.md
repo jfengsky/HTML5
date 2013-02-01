@@ -1,4 +1,4 @@
-个人简历
+姜峰的简历
 =====
 
 个人信息
@@ -23,14 +23,7 @@
 ### 2000/9 ~ 2004/7 长江大学
 ####计算机科学与技术专业 4年制本科
 
-专业技能
----
-* 深刻理解Web标准，对语意化、可用性、可访问性等相关知识有实际的了解和实践经验。
-* 精通<code>html</code>+<code>css</code>的页面重构方法 ，熟悉主流浏览器兼容以及开发技巧，精确还原设计图，制作符合W3C标准的网站页面。
-* 熟练掌握<code>JavaScript</code>包括<code>Ajax</code>等页面开发技术，对一些常用js框架如<code>jQuery</code>等有一定应用经验。
-* 熟练运用各种工具优化网站前端页面，缩减页面体积，加快加载速度及优化用户体验。
-* 熟悉<code>PHP</code>，<code>nodejs</code>服务端语言和<code>mysql</code>数据库操作。
-* 对前端开发有浓厚的兴趣，喜欢学习钻研前端各种最新的开发技能。
+
 
 工作经历
 ---
@@ -38,14 +31,16 @@
 * 所属行业:电子商务
 * 所在部门:淘宝UED
 * 主要职责:
-  - 1.维护淘宝首页一些前端需求并且参与了淘宝2012版首页前端开发制作。
-  - 2.其它业务线的前端开发制作，包括：
-    + 拍卖首页：[http://paimai.taobao.com/](http://paimai.taobao.com/)
-    + 我要买:[http://love.taobao.com/](http://love.taobao.com/)
-    + 淘公仔频道:[http://toy.taobao.com/](http://toy.taobao.com/)
-    + 淘公仔设计师平台频道:[http://bingo.taobao.com/](http://bingo.taobao.com/)
-    + 淘宝有求必应频道:[http://ying.taobao.com/](http://ying.taobao.com/)
-等……
+  - 1.维护淘宝首页一些前端需求并且参与了淘宝2012版首页前端开发。
+  - 2.其它业务线的前端开发，包括：
+      + 拍卖首页：[http://paimai.taobao.com/](http://paimai.taobao.com/)
+      + 我要买:[http://love.taobao.com/](http://love.taobao.com/)
+      + 淘公仔频道:[http://toy.taobao.com/](http://toy.taobao.com/)
+      + 淘公仔设计师平台频道:[http://bingo.taobao.com/](http://bingo.taobao.com/)
+      + 淘宝有求必应频道:[http://ying.taobao.com/](http://ying.taobao.com/)
+      + C2B项目:[http://hm.taobao.com/](http://hm.taobao.com/)
+    
+  - 3.参与配合一些公司内部的项目，工具开发以及专业知识分享活动。
 
 ### 2009/5 ~ 2010/7 杭州共震科技技术有限公司
 * 所属行业:互联网、电子商务
@@ -64,4 +59,23 @@
 
 自我评价
 ---
+  本人适应力强，做事认真负责，勤勉不懈，追求细致入微、精益求精。处人处事随和，积极参与项目讨论和配合同事一起完成工作。
+  
+  在长期的工作中也积累和总结了大量的经验，特别是前端方面，比如主流浏览器兼容性等，这使得在本职工作中可以少走很多弯路，提高工作效率。
+  
+  平时喜欢钻研web前端效果的技术与实现。对互联网新技术和事物特别是移动客户端非常感兴趣，在阿里云平台和<code>android</code>平台做过一些基于浏览器的小app。目前正在学习<code>IOS</code>平台开发。
+  
+  精通HTML，能够书写语义合理，结构清晰，易维护的HTML结构，在一些内部工作中也尽量使用HTML5。
+  
+  精通CSS2，工作中在CSS3上也做些有趣的尝试和使用，平时开发喜欢用<code>Sass</code> + <code>compass</code>（工作效率可以提高很多），平台环境支持的也用<code>Less</code>。
+  
+  熟练操作PS，有时候自己也设计些页面。在切图方面努力做到与视觉稿一致的像素级别demo。
+  
+  熟悉<code>JavaScript</code>语言和<code>coffeeScript</code>(快速开发用)，熟练使用Ajax富客户端应用开发技术。
+  
+  有主流js框架的使用经验，如<code>jQuery</code>和<code>YUI</code>。自己也写和封装一些通用的js库和插件。
+  
+  熟悉</code>PHP</code>和<code>Java</code>服务端语言，<code>nodejs</code>也尝试过，并运用这些服务端自己创建集成快速开发平台。
+  
+
 
