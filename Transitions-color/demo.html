@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>css3 颜色渐变动画</title>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <style>
+  .bg{
+    height:300px;
+    width:300px;
+    background-color:#333;
+    position:absolute;
+    left:100px;
+    top:20px;
+  }
+  .demo{
+    height:300px;
+    width:300px;
+    background-color:#000;
+    opacity:0.6;
+    position:absolute;
+    left:300px;
+    top:240px;
+  }
+  .on{
+    background-color:#f00;
+    -webkit-transition: background-color 0.4s linear;
+  }
+  .off{
+    background-color:#000;
+    -webkit-transition: background-color 0.4s linear;
+  }
+  </style>
+</head>
+<body>
+<div class="bg"></div>
+<div class="demo" id="J_demo">
+  
+</div>
+<script>
+$('#J_demo').on('mouseenter',function(){
+  $('#J_demo').addClass('on');
+  $('#J_demo').removeClass('off');
+}).on('mouseleave',function(){
+  $('#J_demo').addClass('off');
+  $('#J_demo').removeClass('on');
+})
+</script>
+</body>
+</html>
