@@ -1,6 +1,6 @@
 {
-  "name": "gruntdemo",
-  "version": "0.1.0",
+  "name": "yiqi",
+  "version": "0.0.1",
   "devDependencies": {
     "grunt": "*",
     "grunt-contrib-compass": "*",
