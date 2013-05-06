@@ -158,6 +158,7 @@
   </div>
   <div class="ice ice_attack00"></div>
 </div>
+<input type="button" value="click" id="J_click">
 <script src="assets/libs/seajs/sea.js"></script>
 </body>
 </html>
