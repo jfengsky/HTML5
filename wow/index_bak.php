@@ -25,29 +25,27 @@
 <script src="assets/libs/backbone.1.0.0.js"></script>
 </head>
 <body>
-<header>
-  <h4>Heading</h4>
-  <p>name:
-  leve:
-  Exp:
-  health:
-  money:</p>
-</header>
-<section data-role="collapsible" data-collapsed="false">
-  <h4>Heading</h4>
-  <ul data-role="listview">
-      <li><a href="#">List item 1</a></li>
-      <li><a href="#">List item 2</a></li>
-      <li><a href="#">List item 3</a></li>
-  </ul>
-</section>
-<section data-role="controlgroup">
-  <a href="#" data-role="button">Timeline</a>
-  <a href="#" data-role="button">Mentions</a>
-  <a href="#" data-role="button">Retweets</a>
-</section>
-<footer class="ui-body-a ui-body" data-position="fixed">
-  <nav data-role="navbar">
+
+<ul data-role="listview" data-inset="true">
+  <li><a href="#">
+    <img src="../../_assets/img/album-bb.jpg">
+    <h2>Broken Bells</h2>
+    <p>Broken Bells</p></a>
+  </li>
+  <li><a href="#">
+    <img src="../../_assets/img/album-hc.jpg">
+    <h2>Warning</h2>
+    <p>Hot Chip</p></a>
+  </li>
+  <li><a href="#">
+    <img src="../../_assets/img/album-p.jpg">
+    <h2>Wolfgang Amadeus Phoenix</h2>
+    <p>Phoenix</p></a>
+  </li>
+</ul>
+
+<div class="ui-body-a ui-body">
+  <div data-role="navbar">
       <ul>
         <li><a href="#" data-icon="grid">标题2</a></li>
         <li><a href="#" data-icon="star">标题4</a></li>
@@ -55,8 +53,8 @@
         <li><a href="#" data-icon="arrow-l">D</a></li>
         <li><a href="#" data-icon="arrow-r">E</a></li>
       </ul>
-  </nav>
-</footer>
+  </div>
+</div>
 <script src="assets/libs/seajs/sea.js"></script>
 </body>
 </html>
