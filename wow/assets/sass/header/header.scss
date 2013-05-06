@@ -1,0 +1,37 @@
+/**
+ * 头部个人信息模块样式
+ * 
+ */
+@import "global";
+header{
+  padding:10px;
+  height:100px;
+  h2{
+    font-size:1.4em;
+    padding-bottom:10px;
+  }
+  .level{
+    float:left;
+    width:40%;
+  }
+  .money{
+    float:left;
+    width:60%;
+  }
+  .exp{
+    width:100%;
+    float:left;
+    padding-top:10px;
+    em{
+      float:left;
+    }
+    .line{
+      float:left;
+      height:10px;
+      width:100px;
+      background-color:#ccc;
+      border-radius:5px;
+      box-shadow:1px 1px 5px #999 inset;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+/**
+ * 头部个人信息模块样式
+ * 
+ */
+/* line 6, ../../sass/header/header.scss */
+header {
+  padding: 10px;
+  height: 100px;
+}
+/* line 9, ../../sass/header/header.scss */
+header h2 {
+  font-size: 1.4em;
+  padding-bottom: 10px;
+}
+/* line 13, ../../sass/header/header.scss */
+header .level {
+  float: left;
+  width: 40%;
+}
+/* line 17, ../../sass/header/header.scss */
+header .money {
+  float: left;
+  width: 60%;
+}
+/* line 21, ../../sass/header/header.scss */
+header .exp {
+  width: 100%;
+  float: left;
+  padding-top: 10px;
+}
+/* line 25, ../../sass/header/header.scss */
+header .exp em {
+  float: left;
+}
+/* line 28, ../../sass/header/header.scss */
+header .exp .line {
+  float: left;
+  height: 10px;
+  width: 100px;
+  background-color: #ccc;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px #999 inset;
+}
