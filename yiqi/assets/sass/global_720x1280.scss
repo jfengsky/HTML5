@@ -1,4 +1,100 @@
 @import "global";
+
+$l5:2%;
+$l21:19%;
+$l38:35%;
+$l55:52%;
+$l70:68%;
+$t5:3%;
+$t53:51%;
+
+// blood color
+$blood_green:#0c3;
+$blood_red:#f00;
+
+@mixin pos($left, $top){
+  left:$left;
+  top:$top;
+}
+
 .main{
   @include note2;
+  position: relative;
+  .enemy, .partner{
+    @include rolebox(100%, 40%);
+    li{
+      background-color:#999;
+      width:30%;
+      height:$height_1280 / 5 - $height_1280 / 50;
+      position: absolute;
+    }
+    .rolebox{
+      width:80%;
+      height:94%;
+      margin:auto;
+      // background-color: #fff;
+      box-shadow:1px 1px 10px #999;
+      position: absolute;
+      left:10%;
+    }
+    .health{
+      width:98%;
+      margin:auto;
+      height:4%;
+      background-color:$blood_red;
+      border-radius:4px;
+      position: absolute;
+      bottom:1px;
+      left:1px;
+      .blood{
+        width:100%;
+        height:100%;
+        background-color:$blood_green;
+        display: block;
+        border-radius:4px;
+      }
+    }
+  }
+  .enemy{
+    top:0;
+    .rolebox{
+      top:0;
+    }
+    .enemy0{
+      @include pos($l21, $t53);
+    }
+    .enemy1{
+      @include pos($l55, $t53);
+    }
+    .enemy2{
+      @include pos($l5, $t5);
+    }
+    .enemy3{
+      @include pos($l38, $t5);
+    }
+    .enemy4{
+      @include pos($l70, $t5);
+    }
+  }
+  .partner{
+    .rolebox{
+      bottom:0;
+    }
+    bottom:0;
+    .partner0{
+      @include pos($l21, $t5);
+    }
+    .partner1{
+      @include pos($l55, $t5);
+    }
+    .partner2{
+      @include pos($l5, $t53);
+    }
+    .partner3{
+      @include pos($l38, $t53);
+    }
+    .partner4{
+      @include pos($l70, $t53);
+    }
+  }
 }

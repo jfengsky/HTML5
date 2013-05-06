@@ -1,4 +1,4 @@
-// 一些设备的分辨率
+// Some of the equipment resolution
 $width_480:480px;
 $width_640:640px;
 $width_720:720px;
@@ -29,4 +29,14 @@ $height_1280:1280px;
   width:$width_720;
   height:$height_1280;
   margin:auto;
+  background-color:#ddd;
+}
+
+// role box
+@mixin rolebox($wide, $height){
+  width:$wide;
+  height:$height;
+  position:absolute;
+  left:0;
+  background-color:#ccc;
 }

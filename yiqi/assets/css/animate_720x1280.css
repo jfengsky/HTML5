@@ -1,0 +1,87 @@
+@-webkit-keyframes partner_attack {
+  0% {
+    bottom: 5px; }
+
+  25% {
+    bottom: 5px;
+    -webkit-transform: rotate(-5deg); }
+
+  50% {
+    bottom: 5px;
+    -webkit-transform: rotate(0deg); }
+
+  75% {
+    bottom: 5px;
+    -webkit-transform: rotate(5deg); }
+
+  100% {
+    bottom: 5px; } }
+
+@-webkit-keyframes enemy_attack {
+  0% {
+    top: 5px; }
+
+  25% {
+    top: 5px;
+    -webkit-transform: rotate(-5deg); }
+
+  50% {
+    top: 5px;
+    -webkit-transform: rotate(0deg); }
+
+  75% {
+    top: 5px;
+    -webkit-transform: rotate(5deg); }
+
+  100% {
+    top: 5px; } }
+
+.partner_attack_move {
+  -webkit-animation: partner_attack 0.3s; }
+
+.enemy_attack_move {
+  -webkit-animation: enemy_attack 0.3s; }
+
+@-webkit-keyframes magicattack {
+  0% {
+    opacity: 0.5;
+    top: 300px;
+    -webkit-transform: scale(1.2, 1.2); }
+
+  25% {
+    opacity: 1;
+    top: 260px;
+    -webkit-transform: scale(1.4, 1.4); }
+
+  50% {
+    opacity: 1;
+    top: 220px;
+    -webkit-transform: scale(1.6, 1.6); }
+
+  75% {
+    opacity: 1;
+    top: 180px;
+    -webkit-transform: scale(1.8, 1.8); }
+
+  90% {
+    opacity: 1;
+    top: 140px;
+    -webkit-transform: scale(2, 2); }
+
+  100% {
+    opacity: 1;
+    top: 140px;
+    -webkit-transform: scale(2.4, 2.4); } }
+
+.ice {
+  height: 30px;
+  width: 30px;
+  background-color: #06f;
+  border-radius: 30px;
+  position: absolute;
+  left: 100px;
+  top: 140px;
+  opacity: 0; }
+
+.ice_attack00 {
+  -webkit-animation: magicattack 0.3s; }

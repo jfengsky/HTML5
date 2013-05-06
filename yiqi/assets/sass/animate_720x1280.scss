@@ -1,0 +1,95 @@
+@import "global";
+
+// role move
+@mixin role_move($pos, $height){
+  0%{
+    #{$pos}:$height;
+  }
+  25%{
+    #{$pos}:$height;
+    -webkit-transform: rotate(-5deg);
+  }
+  50%{
+    #{$pos}:$height;
+    -webkit-transform: rotate(0deg);
+  }
+  75%{
+    #{$pos}:$height;
+    -webkit-transform: rotate(5deg);
+  }
+  100%{
+    #{$pos}:$height;
+  }
+}
+
+// partner move
+@-webkit-keyframes partner_attack{
+  @include role_move(bottom, 5px);
+}
+
+// enemy move
+@-webkit-keyframes enemy_attack{
+  @include role_move(top, 5px);
+}
+
+// attack move
+@mixin attack_move($team, $sec){
+  -webkit-animation: $team $sec;
+}
+
+//partner attack move
+$mov_time:0.3s;
+.partner_attack_move{
+  @include attack_move(partner_attack,$mov_time);
+}
+.enemy_attack_move{
+  @include attack_move(enemy_attack,$mov_time);
+}
+
+// melee attack
+
+
+
+
+// magic attack
+@mixin magic_scale($opacity, $position, $scale){
+  opacity:$opacity;
+  top:$position;
+  -webkit-transform: $scale;
+}
+
+@-webkit-keyframes magicattack{
+  0% {
+    @include magic_scale(0.5, 300px, scale(1.2,1.2));
+  }
+  25% {
+    @include magic_scale(1, 260px, scale(1.4, 1.4));
+  }
+  50% {
+    @include magic_scale(1, 220px, scale(1.6, 1.6));
+  }
+  75%{
+    @include magic_scale(1, 180px, scale(1.8, 1.8));
+  }
+  90% {
+    @include magic_scale(1, 140px, scale(2, 2));
+  }
+  100% {
+    @include magic_scale(1, 140px, scale(2.4, 2.4));
+  }
+}
+
+.ice{
+  height:30px;
+  width:30px;
+  background-color:#06f;
+  border-radius:30px;
+  position: absolute;
+  left: 100px;
+  top:140px;
+  opacity:0;
+}
+
+.ice_attack00{
+  -webkit-animation:magicattack 0.3s;
+}
