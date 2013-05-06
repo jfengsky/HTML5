@@ -46,13 +46,13 @@
 
 <div class="ui-body-a ui-body">
   <div data-role="navbar">
-    <ul>
-      <li><a href="#" data-icon="grid">A</a></li>
-      <li><a href="#" data-icon="star">B</a></li>
-      <li><a href="#" data-icon="gear">C</a></li>
-      <li><a href="#" data-icon="arrow-l">D</a></li>
-      <li><a href="#" data-icon="arrow-r">E</a></li>
-    </ul>
+      <ul>
+        <li><a href="#" data-icon="grid">标题2</a></li>
+        <li><a href="#" data-icon="star">B</a></li>
+        <li><a href="#" data-icon="gear">C</a></li>
+        <li><a href="#" data-icon="arrow-l">D</a></li>
+        <li><a href="#" data-icon="arrow-r">E</a></li>
+      </ul>
   </div>
 </div>
 <script src="assets/libs/seajs/sea.js"></script>
