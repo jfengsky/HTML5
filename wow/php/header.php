@@ -6,16 +6,20 @@
 ?>
 <header>
   <h2>Jfeng</h2>
-  <div class="level">
-    <em>Level:</em>
+  <div class="info level">
+    <em>等级:</em>
     <span>59</span>
   </div>
-  <div class="money">
-    <em>Money:</em>
-    <span>5000</span>
+  <div class="info gold">
+    <em>金币:</em>
+    <span>800000000</span>
+  </div>
+  <div class="info">
+    <em>友情:</em>
+    <span>5000000</span>
   </div>
   <div class="exp">
-    <em>Exp:</em>
+    <em>经验:</em>
     <div class="line">
       <span></span>
     </div>

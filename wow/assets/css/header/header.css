@@ -5,7 +5,7 @@
 /* line 6, ../../sass/header/header.scss */
 header {
   padding: 10px;
-  height: 100px;
+  height: 70px;
 }
 /* line 9, ../../sass/header/header.scss */
 header h2 {
@@ -13,31 +13,49 @@ header h2 {
   padding-bottom: 10px;
 }
 /* line 13, ../../sass/header/header.scss */
-header .level {
+header .info {
   float: left;
+  width: 30%;
+}
+/* line 16, ../../sass/header/header.scss */
+header .info span {
+  overflow: hidden;
+}
+/* line 20, ../../sass/header/header.scss */
+header .level {
+  width: 24%;
+}
+/* line 23, ../../sass/header/header.scss */
+header .gold {
   width: 40%;
 }
-/* line 17, ../../sass/header/header.scss */
-header .money {
-  float: left;
-  width: 60%;
-}
-/* line 21, ../../sass/header/header.scss */
+/* line 26, ../../sass/header/header.scss */
 header .exp {
   width: 100%;
   float: left;
   padding-top: 10px;
 }
-/* line 25, ../../sass/header/header.scss */
+/* line 30, ../../sass/header/header.scss */
 header .exp em {
   float: left;
 }
-/* line 28, ../../sass/header/header.scss */
+/* line 33, ../../sass/header/header.scss */
 header .exp .line {
   float: left;
   height: 10px;
-  width: 100px;
+  width: 86%;
   background-color: #ccc;
   border-radius: 5px;
   box-shadow: 1px 1px 5px #999 inset;
+  margin: 4px 0 0 6px;
+  overflow: hidden;
+}
+/* line 42, ../../sass/header/header.scss */
+header .exp .line span {
+  height: 10px;
+  width: 100%;
+  background-color: #39f;
+  border-radius: 5px;
+  display: block;
+  box-shadow: -1px -1px 8px #0066ff inset;
 }

@@ -5,18 +5,23 @@
 @import "global";
 header{
   padding:10px;
-  height:100px;
+  height:70px;
   h2{
     font-size:1.4em;
     padding-bottom:10px;
   }
-  .level{
+  .info{
     float:left;
-    width:40%;
+    width:30%;
+    span{
+      overflow:hidden;
+    }
   }
-  .money{
-    float:left;
-    width:60%;
+  .level{
+    width:24%;
+  }
+  .gold{
+    width:40%;
   }
   .exp{
     width:100%;
@@ -28,10 +33,20 @@ header{
     .line{
       float:left;
       height:10px;
-      width:100px;
+      width:86%;
       background-color:#ccc;
       border-radius:5px;
       box-shadow:1px 1px 5px #999 inset;
+      margin:4px 0 0 6px;
+      overflow:hidden;
+      span{
+        height:10px;
+        width:100%;
+        background-color:#39f;
+        border-radius:5px;
+        display:block;
+        box-shadow:-1px -1px 8px #06f inset;
+      }
     }
   }
 }
