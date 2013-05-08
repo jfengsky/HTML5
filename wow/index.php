@@ -14,15 +14,9 @@
 <body>
 <?php 
   require('php/header.php');
+  require('php/team.php');
 ?>
-<section data-role="collapsible" data-collapsed="false">
-  <h4>Heading</h4>
-  <ul data-role="listview">
-      <li><a href="#">List item 1</a></li>
-      <li><a href="#">List item 2</a></li>
-      <li><a href="#">List item 3</a></li>
-  </ul>
-</section>
+
 <section data-role="controlgroup">
   <a href="#" data-role="button">Timeline</a>
   <a href="#" data-role="button">Mentions</a>
