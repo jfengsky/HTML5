@@ -1,5 +1,5 @@
 /**
- * 头部个人信息模块样式
+ *
  * 
  */
 /* line 6, ../../sass/header/header.scss */
@@ -57,5 +57,5 @@ header .exp .line span {
   background-color: #39f;
   border-radius: 5px;
   display: block;
-  box-shadow: -1px -1px 8px #0066ff inset;
+  box-shadow: -1px -1px 8px #06f inset;
 }

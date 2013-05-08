@@ -4,12 +4,12 @@
  * 
  */
 ?>
-<section>
-  <dl>
+<section class="teaminfo">
+  <dl class="leader">
     <dt>leader</dt>
     <dd></dd>
   </dl>
-  <dl>
+  <dl class="teamer">
     <dt>teamer</dt>
     <dd></dd>
     <dd></dd>

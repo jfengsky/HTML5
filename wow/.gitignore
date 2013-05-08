@@ -6,3 +6,5 @@ app/config/database.php
 !empty
 .DS_Store
 .sass-cache
+.idea
+*.iml
