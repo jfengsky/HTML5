@@ -9,6 +9,7 @@
 <script>
 (function(){
   var attack_send = {
+        // 职业
         level:58,
         hp: 10000,
         def:1000,
@@ -64,7 +65,7 @@
         last_dodge = accept_dodge + (Math.abs(level_dev) * _basic) / 100;
       }
     }
-    console.log(last_dodge);
+//    console.log(last_dodge);
     return Math.random() <= last_dodge ? true : false;
   }
   function fight(){
@@ -81,8 +82,23 @@
   /**
    * 计算伤害
    */
-  
+  function damage(person){
+    var dmg = 0,
+        crits = false;
 
+    // TODO 获取职业
+    if('wirrir'){
+      dmg = person.strength * 1.5;
+    }
+    // 是否暴击
+    crits = Math.random() <= person.crit / 100 ? true : false;
+    if(crits){
+      dmg = dmg * 1.5;
+    }
+    return dmg;
+  }
+
+  damage(attack_send);
 })();
 </script>
 </body>
