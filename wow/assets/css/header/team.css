@@ -1,0 +1,15 @@
+/**
+ * Description:
+ * Author:  (jiangfeng@tomstaff.com)
+ * Update: 2013-05-08 14:43
+ */
+/* line 8, ../../sass/header/team.scss */
+.teaminfo dl.leader {
+  width: 20%;
+  height: 100px;
+}
+/* line 12, ../../sass/header/team.scss */
+.teaminfo dl.teamer {
+  width: 70%;
+  height: 100px;
+}
