@@ -77,37 +77,12 @@
   }
   fight();
 
+  
   /**
-   * 计算是否闪避
-   * @return {boolean} [true false]
+   * 计算伤害
    */
-  // function fight_dodge(){
-  //   var dodge_basic = 3, // 闪避倍值
-  //       level_deviatioin = teamer.level - enemy.level, // 获取等级差距
-  //       fight_dodge = enemy.dodge/100,  // 被攻击者闪避值
-  //       final_dodge = 0;  // 计算最后得出的闪避值
-  //   if(level_deviatioin >= 0 && level_deviatioin < 10){ // 攻击者等级比被攻击者高
-  //     console.log('等级差距:' + level_deviatioin);
-  //     fight_dodge = (fight_dodge - (level_deviatioin * dodge_basic) / 100).toFixed(2);
-  //     // console.log(fight_dodge <= 0);
-  //     if(fight_dodge <= 0){ // 100%命中
-  //       final_dodge = 1;
-  //     }
-  //     // fight_dodge = fight_dodge.toFixed(2);
-  //     // if(fight_dodge <= 0){
-  //     //   console.log('1 correct');
-  //     // }else{
-  //     //   fight_dodge = fight_dodge + 
-  //     // }
-  //   }else if(level_deviatioin >= 10){
-  //     console.log('10倍等级差距！');
-  //     fight_dodge = 0.9;
-  //     fight_dodge_number(fight_dodge);
-  //   }else if(level_deviatioin < 0){ // 攻击者等级比被攻击者低
-  //     console.log('等级差距:' + level_deviatioin);
-  //   }
-  // }
-  // console.log(fight_dodge());
+  
+
 })();
 </script>
 </body>
