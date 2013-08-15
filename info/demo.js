@@ -19,5 +19,5 @@ for(var i = 0; i< pos.length;i++){
 draw.apply(null,pos[i].split(","));
 }
 
-
+http://ued.campus.alibaba.com/quiz3/index.php?t=YTFiY2VlZDJtUzZCSmhCUVpXQndNREF3Y0NWazlR
 (function() { var search = location.search; location.search = search.replace(/room\=\d*/, function( w ) { return "room=" + jQuery("#next-room").text(); }); })();
