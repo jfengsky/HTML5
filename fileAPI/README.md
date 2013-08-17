@@ -1,6 +1,6 @@
 HTML5 File API
 ===
-[w3c地址](http://www.w3.org/TR/FileAPI/)
+[w3c fileAPI](http://www.w3.org/TR/FileAPI/)
 
 这个规范提供了提供了本地文件读取的API规范，因此，我们可以直接在浏览器中读取客户端的文件。
 
@@ -12,34 +12,34 @@ HTML5 File API
 
 在HTML5中，input:file增加了一个<code>multiple</code>属性终于实现了文件的多选。
 
-		<input type="file" name="" multiple />
+	<input type="file" name="" multiple />
 
 filelise示例:
 
-		<!doctype html>
-		<html lang="en">
-		<head>
-  		<meta charset="UTF-8">
-  		<title>file name,size and type</title>
-		</head>
-		<body>
-  		<input type="file" name="" id="J_file" multiple="multiple">
-		<ul id="J_output"></ul>
-		<script>
-		var fileInput = document.getElementById('J_file'),
-  			outPut = document.getElementById('J_output');
+	<!doctype html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>file name,size and type</title>
+	</head>
+	<body>
+		<input type="file" name="" id="J_file" multiple="multiple">
+	<ul id="J_output"></ul>
+	<script>
+	var fileInput = document.getElementById('J_file'),
+			outPut = document.getElementById('J_output');
 
-		fileInput.onchange = function(event){
-			if(event.target.files.length > 0) {
-  				for( var i = 0; i < event.target.files.length; i++){
-    				var file = event.target.files[i];
-    				outPut.innerHTML += '<li>fileame: ' + file.name + '</li><li>fileSize: ' + file.size + '</li><li>fileType: ' + file.type + '<br /><br /></li>';
-  				}
-			}
-		};
-		</script>
-		</body>
-		</html>
+	fileInput.onchange = function(event){
+		if(event.target.files.length > 0) {
+				for( var i = 0; i < event.target.files.length; i++){
+  				var file = event.target.files[i];
+  				outPut.innerHTML += '<li>fileame: ' + file.name + '</li><li>fileSize: ' + file.size + '</li><li>fileType: ' + file.type + '<br /><br /></li>';
+				}
+		}
+	};
+	</script>
+	</body>
+	</html>
 
 
 参考：
