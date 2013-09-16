@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>缓慢回到顶部</title>
+    <style>
+        #J_top{
+            font-size: 12px;
+            width:14px;
+            background:#333;
+            color:#fff;
+            text-align: center;
+            cursor: pointer;
+            padding: 5px;
+            position:fixed;
+            right:10px;
+            bottom:20px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div style="height:4000px">
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />2<br />1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+    1<br />
+    2<br />
+</div>
+<div id="J_top">
+    回到顶部
+</div>
+<script>
+
+window.onload = function(){
+    var m = 0; // 滚动条距离顶部高度
+    window.onscroll = function(){
+        m = document.documentElement.scrollTop + document.body.scrollTop; // 滚动条距离顶部高度
+        $('J_top').style.display = (m > 500) ? 'block' :  'none';   //高度小于500不显示滚动条
+    };
+    scrollTop()
+};
+function scrollTop(){
+    var t = 0; // 时间 ms
+    var d = 1000; // 移动该距离花的时间 ms
+    var b = 0; // 当前的位置
+    $('J_top').onclick = function(){
+        var c = document.documentElement.scrollTop + document.body.scrollTop; // 距离
+        var anim = setInterval(function(){
+            t = t + 25;
+            document.documentElement.scrollTop = c - queeaseOut(t,b,c,d);
+            document.body.scrollTop = c - queeaseOut(t,b,c,d);
+            if( t > d ){
+                clearInterval(anim);
+                t = null;
+                b = null;
+                return false;
+            }
+        },25);
+    }
+}
+function $(id){return document.getElementById(id)}
+function queeaseOut(t,b,c,d){
+    return -c * ((t=t/d-1)*t*t*t - 1) + b;
+}
+</script>
+</body>
+</html>

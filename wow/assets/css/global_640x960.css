@@ -1,0 +1,7 @@
+/* line 2, ../sass/global_640x960.scss */
+.main {
+  width: 640px;
+  height: 960px;
+  margin: auto;
+  opacity:0.8;
+}

@@ -1,0 +1,53 @@
+@-webkit-keyframes partner_attack {
+  0% {
+    bottom: 5px; }
+
+  25% {
+    bottom: 5px;
+    -webkit-transform: rotate(-5deg); }
+
+  50% {
+    bottom: 5px;
+    -webkit-transform: rotate(0deg); }
+
+  75% {
+    bottom: 5px;
+    -webkit-transform: rotate(5deg); }
+
+  100% {
+    bottom: 5px; } }
+
+@-webkit-keyframes enemy_attack {
+  0% {
+    top: 5px; }
+
+  25% {
+    top: 5px;
+    -webkit-transform: rotate(-5deg); }
+
+  50% {
+    top: 5px;
+    -webkit-transform: rotate(0deg); }
+
+  75% {
+    top: 5px;
+    -webkit-transform: rotate(5deg); }
+
+  100% {
+    top: 5px; } }
+
+.partner_attack_move {
+  -webkit-animation: partner_attack 0.3s; }
+
+.enemy_attack_move {
+  -webkit-animation: enemy_attack 0.3s; }
+
+.ice {
+  height: 30px;
+  width: 30px;
+  background-color: #06f;
+  border-radius: 30px;
+  position: absolute;
+  left: 100px;
+  top: 140px;
+  opacity: 0; }

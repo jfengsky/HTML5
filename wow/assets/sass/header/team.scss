@@ -1,0 +1,17 @@
+/**
+ * Description:
+ * Author:  (jiangfeng@tomstaff.com)
+ * Update: 2013-05-08 14:43
+ */
+.teaminfo{
+  dl{
+    &.leader{
+      width:20%;
+      height:100px;
+    }
+    &.teamer{
+      width:70%;
+      height:100px;
+    }
+  }
+}

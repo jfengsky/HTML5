@@ -1,0 +1,42 @@
+ // Some of the equipment resolution
+$width_480:480px;
+$width_640:640px;
+$width_720:720px;
+$height_800:800px;
+$height_960:960px;
+$height_1136:1136px;
+$height_1280:1280px;
+// 
+@mixin w700{
+  width:$width_480;
+  height:$height_800;
+  margin:auto;
+}
+
+@mixin ip4{
+  width:$width_640;
+  height:$height_960;
+  margin:auto;
+}
+
+@mixin ip5{
+  width:$width_640;
+  height:$height_1136;
+  margin:auto;
+}
+
+@mixin note2{
+  width:$width_720;
+  height:$height_1280;
+  margin:auto;
+  background-color:#ddd;
+}
+
+// role box
+@mixin rolebox($wide, $height){
+  width:$wide;
+  height:$height;
+  position:absolute;
+  left:0;
+  background-color:#ccc;
+}

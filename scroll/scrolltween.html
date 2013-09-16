@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+    <title>返回顶部</title>
+    <style>
+        .fix{
+            width:200px;
+            height: 120px;
+            padding:5px;
+            background:#f60;
+            color:#fff;
+            position:absolute;
+            right:30px;
+            top:100px;
+            cursor:pointer;
+        }
+
+    </style>
+</head>
+<body>
+<div style="height:400px;background-color:#cbf3f8"></div>
+<div style="height:400px;background-color:#ffdfbf"></div>
+<div style="height:400px;background-color:#eabfff"></div>
+<div style="height:400px;background-color:#f2ffbf"></div>
+<div style="height:400px;background-color:#cbf3f8"></div>
+<div class="fix" id="J_fix"></div>
+<script>
+(function(){
+  var processor = {
+    timeoutId:null,
+    performProcessing: function(){
+      window.onscroll = function(){
+        temp_scroll_position = document.documentElement.scrollTop + document.body.scrollTop;
+    console.log('temp scroll:' + temp_scroll_position);
+      }
+    },
+    process: function(){
+      clearTimeout(this.timeoutId);
+      this.timeoutId = setTimeout(function(){
+        processor.performProcessing();
+      },200)
+    }
+  }
+
+  processor.process();
+
+  // window.onscroll = function(){
+  //   console.log(222);
+  // }
+
+  var block = document.getElementById('J_fix'),   // 缓动方块
+      bergin_position = 0,  // 方块初始位置
+      scroll_position = 0,  // 滚动条位置
+      later_scroll_time = 1000,  // 延迟再去取滚动条位置的时间
+      temp_scroll_position = 0, //  延迟later_scroll_time后滚动条的位置
+      later_scroll_position = 0;    // 停止滚动后滚动条的位置
+      scrolling_tag = false;    // 滚动条是否在滚动
+
+
+  // window.onscroll = function(){
+  //   // 取得当前滚动条位置
+  //   temp_scroll_position = document.documentElement.scrollTop + document.body.scrollTop;
+  //   console.log('temp scroll:' + temp_scroll_position);
+
+  //   // 延迟后去取当前滚动条的位置
+  //   var check_scroll = setTimeout(function(){
+  //       later_scroll_position = document.documentElement.scrollTop + document.body.scrollTop;
+  //       console.log('last scroll:' + later_scroll_position);
+  //       if(later_scroll_position - temp_scroll_position == 0){
+  //         console.log('hanstop');
+  //         scrolling_tag = true;
+  //         clearTimeout(check_scroll);
+  //       }
+  //   },later_scroll_time);
+
+
+
+    
+
+    // if(scrolling_tag){
+    //     console.log('stop scroll');
+    // }
+  //}
+  /**
+   * [一个缓动公式]
+   * @param  {number} t [timestamp，指缓动效果开始执行到当前帧开始执行时经过的时间段，单位ms]
+   * @param  {number} b [beginning position，起始位置]
+   * @param  {number} c [change，要移动的距离，就是终点位置减去起始位置。]
+   * @param  {number} d [duration ，缓和效果持续的时间。]
+   * @return {[type]}   [description]
+   */
+  function queeaseOut(t,b,c,d){
+    return -c * ((t=t/d-1)*t*t*t - 1) + b;
+  }
+})()
+// var fix = document.getElementById('J_fix');
+// var tag = true;
+// var b = 0;
+// window.onscroll = function(){   // 当滚动条滚动
+//     //console.log(document.documentElement.scrollTop);
+
+
+//         if(tag){
+//             var t = 0;
+//             var d = 400;
+
+//             console.log('begin_top:' + b);
+//             var c = document.documentElement.scrollTop + document.body.scrollTop + 100;
+//             console.log('c:' + c);
+//             var anim = setInterval(function(){
+//                 t = t + 25;
+
+//                 fix.style.top = Math.ceil(queeaseOut(t,b,c,d)) + 'px';
+
+//                 if( t > d ){
+//                     clearInterval(anim);
+//                     return false;
+//                 }
+//             },25);
+
+//             tag = false;
+
+//             setTimeout(function(){
+//                 tag = true;
+//                 begin_top = c;
+//                 return false;
+//             },100)
+//         }
+
+
+
+
+
+
+// };
+
+
+// /**
+//  *  一个缓动算法
+//  *  @Param:
+//  *  - {t} timestamp，指缓动效果开始执行到当前帧开始执行时经过的时间段，单位ms
+//  *  - {b} beginning position，起始位置
+//  *  - {c} change，要移动的距离，就是终点位置减去起始位置。
+//  *  - {d} duration ，缓和效果持续的时间。
+//  */
+// function queeaseOut(t,b,c,d){
+//     return -c * ((t=t/d-1)*t*t*t - 1) + b;
+// }
+</script>
+</body>
+</html>

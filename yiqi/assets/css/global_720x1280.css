@@ -1,0 +1,77 @@
+.main {
+  width: 720px;
+  height: 1280px;
+  margin: auto;
+  background-color: #ddd;
+  position: relative; }
+  .main .enemy, .main .partner {
+    width: 100%;
+    height: 40%;
+    position: absolute;
+    left: 0;
+    background-color: #ccc; }
+    .main .enemy li, .main .partner li {
+      background-color: #999;
+      width: 30%;
+      height: 230.4px;
+      position: absolute; }
+    .main .enemy .rolebox, .main .partner .rolebox {
+      width: 80%;
+      height: 94%;
+      margin: auto;
+      box-shadow: 1px 1px 10px #999;
+      position: absolute;
+      left: 10%; }
+    .main .enemy .health, .main .partner .health {
+      width: 98%;
+      margin: auto;
+      height: 4%;
+      background-color: red;
+      border-radius: 4px;
+      position: absolute;
+      bottom: 1px;
+      left: 1px; }
+      .main .enemy .health .blood, .main .partner .health .blood {
+        width: 100%;
+        height: 100%;
+        background-color: #00cc33;
+        display: block;
+        border-radius: 4px; }
+  .main .enemy {
+    top: 0; }
+    .main .enemy .rolebox {
+      top: 0; }
+    .main .enemy .enemy0 {
+      left: 19%;
+      top: 51%; }
+    .main .enemy .enemy1 {
+      left: 52%;
+      top: 51%; }
+    .main .enemy .enemy2 {
+      left: 2%;
+      top: 3%; }
+    .main .enemy .enemy3 {
+      left: 35%;
+      top: 3%; }
+    .main .enemy .enemy4 {
+      left: 68%;
+      top: 3%; }
+  .main .partner {
+    bottom: 0; }
+    .main .partner .rolebox {
+      bottom: 0; }
+    .main .partner .partner0 {
+      left: 19%;
+      top: 3%; }
+    .main .partner .partner1 {
+      left: 52%;
+      top: 3%; }
+    .main .partner .partner2 {
+      left: 2%;
+      top: 51%; }
+    .main .partner .partner3 {
+      left: 35%;
+      top: 51%; }
+    .main .partner .partner4 {
+      left: 68%;
+      top: 51%; }

@@ -1,0 +1,52 @@
+/**
+ *
+ * 
+ */
+@import "global";
+header{
+  padding:10px;
+  height:70px;
+  h2{
+    font-size:1.4em;
+    padding-bottom:10px;
+  }
+  .info{
+    float:left;
+    width:30%;
+    span{
+      overflow:hidden;
+    }
+  }
+  .level{
+    width:24%;
+  }
+  .gold{
+    width:40%;
+  }
+  .exp{
+    width:100%;
+    float:left;
+    padding-top:10px;
+    em{
+      float:left;
+    }
+    .line{
+      float:left;
+      height:10px;
+      width:86%;
+      background-color:#ccc;
+      border-radius:5px;
+      box-shadow:1px 1px 5px #999 inset;
+      margin:4px 0 0 6px;
+      overflow:hidden;
+      span{
+        height:10px;
+        width:100%;
+        background-color:#39f;
+        border-radius:5px;
+        display:block;
+        box-shadow:-1px -1px 8px #06f inset;
+      }
+    }
+  }
+}

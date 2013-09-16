@@ -1,0 +1,10 @@
+tmp/*
+node_modules/*
+config/database.php
+app/tmp/*
+app/config/database.php
+!empty
+.DS_Store
+.sass-cache
+.idea
+*.iml
